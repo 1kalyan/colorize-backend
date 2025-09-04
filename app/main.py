@@ -25,3 +25,13 @@ app.add_middleware(
 @app.get("/", tags=["meta"])
 def root():
     return {"ok": True, "app": settings.APP_NAME}
+
+
+@app.get("/health", tags=["meta"])
+def health():
+    return {"status": "ok"}
+
+@app.get("/db-health", tags=["meta"])
+async def db_health(db=Depends(get_db)):
+    await db.command("ping")
+    return {"db": "ok"}
