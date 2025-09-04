@@ -12,7 +12,7 @@ class Settings(BaseSettings):
 
     JWT_SECRET: str
     JWT_ALGORITHM: str = "HS256"
-    JWT_EXPIRE_MINUTES: int = 60 * 24 * 30  # 30 days
+    JWT_EXPIRE_MINUTES: int = 60 * 24 * 30
 
     MONGO_URL: str
     MONGO_DB: str = "colorize_db"
