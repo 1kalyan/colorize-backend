@@ -1,3 +1,30 @@
-venv/
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dylib
+
+# Virtual envs
+.venv/
+venv/
+
+# Env/config
+.env
+*.env
+
+# OS
+.DS_Store
+
+# Build/Artifacts
+dist/
+build/
+.eggs/
+*.egg-info/
+
+# Data/Models (if any)
+data/
+models/
+checkpoints/
+EOF
